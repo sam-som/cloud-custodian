@@ -32,9 +32,12 @@ install_requires = \
  's3transfer (>=0.6.0,<0.7.0)',
  'six (>=1.16.0,<2.0.0)',
  'tabulate (>=0.8.10,<0.9.0)',
- 'typing-extensions (>=4.3.0,<5.0.0)',
+ 'typing-extensions (>=4.4.0,<5.0.0)',
  'urllib3 (>=1.26.12,<2.0.0)',
  'zipp (>=3.8.1,<4.0.0)']
+
+entry_points = \
+{'console_scripts': ['c7n-kates = c7n_kube.cli:cli']}
 
 setup_kwargs = {
     'name': 'c7n-kube',
@@ -59,6 +62,7 @@ setup_kwargs = {
     'packages': packages,
     'package_data': package_data,
     'install_requires': install_requires,
+    'entry_points': entry_points,
     'python_requires': '>=3.7,<4.0',
 }
 
